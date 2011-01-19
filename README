@@ -1,0 +1,27 @@
+KEEP READING
+
+The 'Keep Reading' plugin  can be used to display a small tag in the lower right portion of a screen when the page contains content below the fold.  This is very useful for mobile browsers where you may desire a long form on one page in order to cut down on network trips.  The tag will alert users that they need to scroll to view additional content.  Once the user scrolls the page, the 'more content' tag is animated out of view.  If the page is short enough to display without scrolling, no tag will be inserted.
+
+
+Example usage:
+
+$( function(){
+	$(document).keepReading();
+});
+
+
+
+Example usage with options:
+
+$( function(){
+	$(document).keepReading( { tagText : 'More Below', appearDelay : 1000, displayThreshold : 20 } );
+});
+
+
+
+Options:
+	* tagText 		- The text inserted into the tag when scrolling is required.
+	* appearDelay 		- The amount of time(ms) which will pass before the tag is inserted. 
+			  	  If the user scrolls before this time elapses, the tag will not be inserted.
+	* displayThreshold 	- The percentage of the page which must be hidden before a tag is inserted.  
+				  Default is set to 20%
