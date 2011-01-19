@@ -55,13 +55,13 @@
 				removeTag();
 	    	}
 	    	
-			function removeTag(){
-				if( !$tag ) return;
-				$tag.animate( { right: -tagWidth }, function(){
-					$(window).unbind( 'scroll', handleScroll );
-					$tag.remove();
-				});
-			}
+		function removeTag(){
+			if( !$tag ) return;
+			$tag.animate( { right: -tagWidth }, function(){
+				$(window).unbind( 'scroll', handleScroll );
+				$tag.remove();
+			});
+		}
 
 	    }
 
